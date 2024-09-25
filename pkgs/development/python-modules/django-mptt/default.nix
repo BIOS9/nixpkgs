@@ -10,7 +10,7 @@
 buildPythonPackage rec {
   pname = "django-mptt";
   version = "0.16";
-  format = "setuptools";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = pname;
