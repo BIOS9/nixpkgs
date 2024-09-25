@@ -35,6 +35,7 @@
         django-debug-toolbar
         django-filter
         django-graphiql-debug-toolbar
+        django-htmx
         django-mptt
         django-pglocks
         django-prometheus
