@@ -120,9 +120,6 @@ buildPythonPackage rec {
     # make sure the installed library gets imported
     rm -rf django
 
-    # fails to import github_links from docs/_ext/github_links.py
-    rm tests/sphinx/test_github_links.py
-
     # provide timezone data, works only on linux
     export TZDIR=${tzdata}/${python.sitePackages}/tzdata/zoneinfo
 
