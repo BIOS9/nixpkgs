@@ -27,10 +27,10 @@
 
       patches = extraPatches;
 
-      propagatedBuildInputs = with python3.pkgs; [
+      propagatedBuildInputs = with python3.pkgs.override { django = django_5; }; [
         bleach
         boto3
-        django_5
+        django
         django-cors-headers
         django-debug-toolbar
         django-filter
