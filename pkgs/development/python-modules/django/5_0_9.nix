@@ -52,7 +52,7 @@ buildPythonPackage rec {
     owner = "django";
     repo = "django";
     rev = "refs/tags/${version}";
-    hash = "sha256-3w5MSu3xdF9Pl0iRcD6bOgUF0tLMiZdCWt3JKsx/Rqc=";
+    hash = "sha256-0SZoA9kQ+UTc6V28pRMqqpL9FlWSfKXbGrNWO93a19Y=";
   };
 
   patches =
