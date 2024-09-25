@@ -10,9 +10,16 @@
 , eol ? false
 }:
   let
-    extraBuildInputs = plugins python3.pkgs;
+    py = python3 // {
+      packageOverrides = self: super: {
+        pkgs = python3.pkgs.overrideScope (self: super: {
+          django = super.django_5;
+        };
+      });
+    };
+    extraBuildInputs = plugins py.pkgs;
   in
-  python3.pkgs.buildPythonApplication rec {
+  py.pkgs.buildPythonApplication rec {
       pname = "netbox";
       inherit version;
 
@@ -27,10 +34,7 @@
 
       patches = extraPatches;
 
-      propagatedBuildInputs = with python3.pkgs.override {
-        packageOverrides = pyself: pysuper: {
-          django = pysuper.pkgs.django_5;
-        }; }; [
+      propagatedBuildInputs = with py.pkgs; [
         bleach
         boto3
         django
@@ -77,7 +81,7 @@
         gunicorn
       ] ++ extraBuildInputs;
 
-      buildInputs = with python3.pkgs; [
+      buildInputs = with py.pkgs; [
         mkdocs-material
         mkdocs-material-extensions
         mkdocstrings
@@ -85,7 +89,7 @@
       ];
 
       nativeBuildInputs = [
-        python3.pkgs.mkdocs
+        py.pkgs.mkdocs
       ];
 
       postBuild = ''
@@ -102,10 +106,10 @@
       '';
 
       passthru = {
-        python = python3;
+        python = py;
         # PYTHONPATH of all dependencies used by the package
-        pythonPath = python3.pkgs.makePythonPath propagatedBuildInputs;
-        gunicorn = python3.pkgs.gunicorn;
+        pythonPath = py.pkgs.makePythonPath propagatedBuildInputs;
+        gunicorn = py.pkgs.gunicorn;
         inherit tests;
       };
 
