@@ -41,6 +41,7 @@
         django-prometheus
         django-redis
         django-rq
+        django-strawberry
         django-tables2
         django-taggit
         django-timezone-field
