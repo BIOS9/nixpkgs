@@ -9,14 +9,14 @@
 
 buildPythonPackage rec {
   pname = "django-polymorphic";
-  version = "3.1";
+  version = "4.0.0a";
   format = "setuptools";
 
   src = fetchFromGitHub {
     owner = "django-polymorphic";
     repo = "django-polymorphic";
     rev = "v${version}";
-    hash = "sha256-JJY+FoMPSnWuSsNIas2JedGJpdm6RfPE3E1VIjGuXIc=";
+    hash = "sha256-JJY+FoMPSgWuSsNIas2JedGJpdm6RfPE3E1VIjGuXIc=";
   };
 
   propagatedBuildInputs = [ django ];
