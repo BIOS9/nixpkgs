@@ -5,13 +5,14 @@
   django,
   setuptools,
   python,
+  poetry-core,
 }:
 
 buildPythonPackage rec {
   powner = "strawberry-graphql";
   pname = "strawberry-django";
   version = "0.48.0";
-  format = "pyproject";
+  pyproject = true;
 
   src = fetchFromGitHub {
     owner = powner;
@@ -19,6 +20,8 @@ buildPythonPackage rec {
     rev = "v${version}";
     sha256 = "09fa38b9f493f7e64352ce797a89f322e5d30e77963eb24422e7b29a85b8c244";
   };
+
+  build-system = [ poetry-core ];
 
   propagatedBuildInputs = [
     django
