@@ -67,6 +67,11 @@
         svgwrite
         tablib
         jsonschema
+        nh3
+        tzdata
+        mkdocs-material
+        mkdocstrings
+        gunicorn
       ] ++ extraBuildInputs;
 
       buildInputs = with python3.pkgs; [
