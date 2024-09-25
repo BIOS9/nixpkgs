@@ -30,7 +30,7 @@
       propagatedBuildInputs = with python3.pkgs; [
         bleach
         boto3
-        django_4
+        django_5
         django-cors-headers
         django-debug-toolbar
         django-filter
@@ -58,7 +58,7 @@
         markdown-include
         netaddr
         pillow
-        psycopg2
+        psycopg
         pyyaml
         requests
         sentry-sdk
