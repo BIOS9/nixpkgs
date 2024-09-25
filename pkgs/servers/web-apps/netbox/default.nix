@@ -41,7 +41,7 @@ lib.fix (self: {
     hash = "sha256-WIlLX2cDcc3dhqLflaf0Kv0e3hp7vYq825+NYkHCzGg=";
     extraPatches = [
       # Allow setting the STATIC_ROOT from within the configuration and setting a custom redis URL
-      ./config.patch
+      ./config_v4.patch
     ];
     # tests = {
     #   netbox = nixosTests.netbox_3_7;
