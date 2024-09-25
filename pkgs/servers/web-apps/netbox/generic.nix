@@ -10,13 +10,20 @@
 , eol ? false
 }:
   let
-    py = python3 // {
+    py = python3.override {
+      self = python;
       packageOverrides = self: super: {
-        pkgs = python3.pkgs.overrideScope (self: super: {
-          django = super.django_5;
-        });
+        django = super.django_5;
       };
     };
+
+   # py = python3 // {
+   #   packageOverrides = self: super: {
+   #     pkgs = python3.pkgs.overrideScope (self: super: {
+   #       django = super.django_5;
+   #     });
+   #   };
+   # };
     extraBuildInputs = plugins py.pkgs;
   in
   py.pkgs.buildPythonApplication rec {
