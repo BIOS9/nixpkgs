@@ -11,7 +11,7 @@ buildPythonPackage rec {
   pname = "django-htmx";
   powner = "adamchainz";
   version = "1.19.0";
-  format = "setuptools";
+  format = "pyproject";
 
   src = fetchFromGitHub {
     owner = powner;
