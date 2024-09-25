@@ -27,7 +27,10 @@
 
       patches = extraPatches;
 
-      propagatedBuildInputs = with python3.pkgs.override { django = python3.pkgs.django_5; }; [
+      propagatedBuildInputs = with python3.pkgs.override {
+        packageOverrides = pyself: pysuper: {
+          django = pysuper.pkgs.django_5;
+        }; }; [
         bleach
         boto3
         django
