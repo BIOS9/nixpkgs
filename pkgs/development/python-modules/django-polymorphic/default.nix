@@ -16,7 +16,7 @@ buildPythonPackage rec {
     owner = "django-polymorphic";
     repo = "django-polymorphic";
     rev = "v${version}";
-    hash = "sha256-JJY+FoMPSgWuSsNIas2JedGJpdm6RfPE3E1VIjGuXIc=";
+    hash = "1d47cac7f68c75101af740e8f7bab3208738ac41aec2d710c62c46d36dc459f3";
   };
 
   propagatedBuildInputs = [ django ];
