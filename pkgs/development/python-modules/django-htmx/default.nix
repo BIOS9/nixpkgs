@@ -9,7 +9,7 @@
 
 buildPythonPackage rec {
   pname = "django-htmx";
-  powner = "adamchainz"
+  powner = "adamchainz";
   version = "1.19.0";
   format = "setuptools";
 
