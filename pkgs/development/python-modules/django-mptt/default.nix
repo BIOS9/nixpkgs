@@ -5,6 +5,7 @@
   django,
   django-js-asset,
   python,
+  hatchling,
 }:
 
 buildPythonPackage rec {
@@ -22,6 +23,7 @@ buildPythonPackage rec {
   propagatedBuildInputs = [
     django
     django-js-asset
+    hatchling
   ];
 
   pythonImportsCheck = [ "mptt" ];
