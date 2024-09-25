@@ -14,8 +14,8 @@
       packageOverrides = self: super: {
         pkgs = python3.pkgs.overrideScope (self: super: {
           django = super.django_5;
-        };
-      });
+        });
+      };
     };
     extraBuildInputs = plugins py.pkgs;
   in
