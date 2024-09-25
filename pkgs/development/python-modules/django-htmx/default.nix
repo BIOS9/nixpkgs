@@ -17,7 +17,7 @@ buildPythonPackage rec {
     owner = powner;
     repo = pname;
     rev = version;
-    sha256 = "12y3chxhqxk2yxin055f0f45nabj0s8hil12hw0lwzlbax6k9ss6";
+    sha256 = "9d2bad12b52415a7ca8c1b30842f8bae7dfd32009b0abcedb40c756beaadd6ca";
   };
 
   propagatedBuildInputs = [
