@@ -27,6 +27,7 @@ buildPythonPackage rec {
   propagatedBuildInputs = [
     django
     strawberry-graphql
+    setuptools
   ];
 
 #  pythonImportsCheck = [ "htmx" ];
