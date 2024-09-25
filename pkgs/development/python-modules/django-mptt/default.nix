@@ -6,6 +6,7 @@
   django-js-asset,
   python,
   hatchling,
+  model-bakery,
 }:
 
 buildPythonPackage rec {
@@ -24,6 +25,7 @@ buildPythonPackage rec {
     django
     django-js-asset
     hatchling
+    model-bakery
   ];
 
   pythonImportsCheck = [ "mptt" ];
