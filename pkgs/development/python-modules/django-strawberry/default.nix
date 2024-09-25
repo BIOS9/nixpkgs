@@ -6,6 +6,7 @@
   setuptools,
   python,
   poetry-core,
+  strawberry-graphql,
 }:
 
 buildPythonPackage rec {
@@ -25,7 +26,7 @@ buildPythonPackage rec {
 
   propagatedBuildInputs = [
     django
-    setuptools
+    strawberry-graphql
   ];
 
 #  pythonImportsCheck = [ "htmx" ];
