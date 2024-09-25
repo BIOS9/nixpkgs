@@ -2438,6 +2438,8 @@ self: super: with self; {
 
   colander = callPackage ../development/python-modules/colander { };
 
+  colbert-ai = callPackage ../development/python-modules/colbert-ai { };
+
   collections-extended = callPackage ../development/python-modules/collections-extended { };
 
   collidoscope = callPackage ../development/python-modules/collidoscope { };
@@ -13008,8 +13010,6 @@ self: super: with self; {
   pyunbound = callPackage ../development/python-modules/pyunbound { };
 
   pyunifi = callPackage ../development/python-modules/pyunifi { };
-
-  pyunifiprotect = callPackage ../development/python-modules/pyunifiprotect { };
 
   pyupdate = callPackage ../development/python-modules/pyupdate { };
 
