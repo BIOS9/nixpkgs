@@ -8,12 +8,13 @@
 }:
 
 buildPythonPackage rec {
-  pname = "strawberry-graphql";
+  powner = "strawberry-graphql";
+  pname = "strawberry-django";
   version = "0.48.0";
   format = "pyproject";
 
   src = fetchFromGitHub {
-    owner = pname;
+    owner = powner;
     repo = pname;
     rev = "v${version}";
     sha256 = "1d2bad12b52415a7ca8c1b30842f8bae7dfd32009b0abcedb40c756beaadd6ca";
